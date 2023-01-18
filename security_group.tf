@@ -54,33 +54,3 @@ resource "aws_security_group" "wiz_sg_2" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-
-
-resource "aws_security_group" "wiz_sg_3" {
-  name        = "tf-auto-rem-wiz-test-3"
-  description = "This security group is an example to test wiz auto remediation test three"
-
-  ingress {
-    from_port   = 53
-    to_port     = 53
-    protocol    = "tcp"
-    #cidr_blocks = ["49.36.144.231/32"]
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
- ingress {
-    from_port   = 8080
-    to_port     = 8080
-    protocol    = "tcp"
-    #cidr_blocks = ["49.36.144.231/32"]
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
