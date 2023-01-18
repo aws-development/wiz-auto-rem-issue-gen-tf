@@ -61,8 +61,8 @@ resource "aws_security_group" "wiz_sg_3" {
   description = "This security group is an example to test wiz auto remediation test three"
 
   ingress {
-    from_port   = 27017-27020
-    to_port     = 27017-27020
+    from_port   = 27017
+    to_port     = 27020
     protocol    = "tcp"
     #cidr_blocks = ["49.36.144.231/32"]
     cidr_blocks = ["0.0.0.0/0"]
