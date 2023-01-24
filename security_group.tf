@@ -63,9 +63,17 @@ resource "aws_security_group" "wiz_sg_3" {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
-    #cidr_blocks = ["49.36.144.231/32"]
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["49.36.144.231/32"]
+    #cidr_blocks = ["0.0.0.0/0"]
   }
+
+  ingress {
+     from_port   = 53
+     to_port     = 53
+     protocol    = "udp"
+     #cidr_blocks = ["49.36.144.231/32"]
+     cidr_blocks = ["0.0.0.0/0"]
+   }
 
   egress {
     from_port   = 0
@@ -75,10 +83,10 @@ resource "aws_security_group" "wiz_sg_3" {
   }
 
  ingress {
-    from_port   = 8085
-    to_port     = 8085
+    from_port   = 8081
+    to_port     = 8081
     protocol    = "tcp"
-    #cidr_blocks = ["49.36.144.231/32"]
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["49.36.144.231/32"]
+    #cidr_blocks = ["0.0.0.0/0"]
   }
 }
