@@ -1,7 +1,7 @@
 resource "aws_iam_policy" "policy" {
   name        = "wiz_iam_issue_poc_policy"
   path        = "/"
-  description = "Wiz dummy iam policy to policy"
+  description = "Wiz dummy  poc iam policy to policy"
 
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
