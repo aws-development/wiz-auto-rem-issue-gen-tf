@@ -1,4 +1,12 @@
 terraform {
+    backend "s3" {
+    bucket         = "tf-remote-state20230415072931803000000002"
+    key            = "dev/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    kms_key_id     = "fdadd10a-6db8-4c93-b661-1d3538d3cfb7"
+    dynamodb_table = "tf-remote-state-lock"
+  }
   required_version = ">= 0.13.0"
   required_providers {
     aws = {
@@ -28,3 +36,5 @@ provider "aws" {
     }
   }
 }
+
+
